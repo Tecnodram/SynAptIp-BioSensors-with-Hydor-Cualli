@@ -1,5 +1,6 @@
 /* ============================================================
    HYDOR-CUALLI — Firmware del dispositivo embajador (BASE)
+   Autoría original del proyecto y del código: Emily Acosta.
    ------------------------------------------------------------
    Versión "tal cual nos la dieron". Lee UN sensor a la vez desde
    A0 (agua o aire), según cuál cable de datos esté conectado

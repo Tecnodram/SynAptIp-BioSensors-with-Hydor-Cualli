@@ -1,5 +1,7 @@
 /* ============================================================
    HYDOR-CUALLI — Firmware embajador CON HISTORIAL
+   Autoría original del proyecto y del código: Emily Acosta.
+   Mejora del historial: Adrian Del Río (ADRA-Tech).
    ------------------------------------------------------------
    Es EXACTAMENTE el firmware base, con UN solo cambio: además de
    publicar la última lectura, guarda cada lectura en /historial,

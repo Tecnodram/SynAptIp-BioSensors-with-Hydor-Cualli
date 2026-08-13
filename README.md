@@ -45,6 +45,16 @@ el Monitor Serial. Alguien del equipo te ayuda.
 
 ---
 
+## Créditos
+
+- **Proyecto y código original:** **Emily Acosta** — idea, firmware y desarrollo
+  del sistema Hydor-Cualli.
+- **Mejora del historial y empaquetado del repo:** Adrian Del Río — ADRA-Tech ([@gmork69](https://github.com/gmork69)).
+
+Gracias a toda la comunidad que sostiene el proyecto. 💧🌬️
+
+---
+
 ## En camino
 
 - ESP32 (2 sensores a la vez) y ESP8266 + ADS1115.
