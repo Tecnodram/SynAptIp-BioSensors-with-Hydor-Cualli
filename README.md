@@ -60,3 +60,18 @@ Gracias a toda la comunidad que sostiene el proyecto. 💧🌬️
 - ESP32 (2 sensores a la vez) y ESP8266 + ADS1115.
 - Servidor central propio (para guardar el histórico completo, permanente).
 - Página web para elegir tu hardware y descargar lo tuyo.
+
+---
+
+## Construcción del prototipo 3D
+
+El gabinete y los soportes se diseñarán de acuerdo con el lugar real de
+instalación: interior, exterior, cuerpo de agua, tubería o estación fija.
+Consulta la [guía del prototipo 3D](docs/prototipo-3d/README.md) para registrar
+medidas, requisitos ambientales, mantenimiento y archivos de fabricación.
+
+## Trabajo colaborativo
+
+Antes de proponer cambios, consulta [CONTRIBUTING.md](CONTRIBUTING.md). El
+archivo `hydor-cualli.code-workspace` permite abrir el proyecto completo en
+VS Code y recomienda las extensiones necesarias para firmware y documentación.
