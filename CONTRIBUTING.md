@@ -27,15 +27,18 @@ git commit -m "docs: describe instalacion del prototipo"
 git push -u origin tipo/descripcion-corta
 ```
 
-Finalmente abre un Pull Request hacia `gmork69/hydor-cualli:main`. Describe el
-hardware probado, el resultado y cualquier limitación conocida.
+Finalmente abre un Pull Request hacia
+`Tecnodram/SynAptIp-BioSensors-with-Hydor-Cualli:main`. Describe el hardware
+probado, el resultado y cualquier limitación conocida.
 
 ## Remotos
 
 La configuración recomendada es:
 
 - `origin`: tu fork bajo la cuenta `Tecnodram`.
-- `upstream`: el repositorio colaborativo `gmork69/hydor-cualli`.
+- `upstream`: el repositorio fuente `gmork69/hydor-cualli`, usado solamente
+  para consultar y traer actualizaciones del proyecto original.
 
 Verifica la configuración con `git remote -v`. No hagas `push --force` sobre
-ramas compartidas.
+ramas compartidas ni publiques documentación en `upstream`. Toda la
+documentación ampliada de este proyecto se mantiene en `origin`.

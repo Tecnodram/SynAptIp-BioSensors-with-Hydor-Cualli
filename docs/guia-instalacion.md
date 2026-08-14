@@ -10,9 +10,9 @@ tokens de Firebase ni otras credenciales en GitHub.
 2. Abre la invitación recibida para `gmork69/hydor-cualli`.
 3. Selecciona **Accept invitation**.
 
-La invitación permite colaborar en el repositorio original. Para conservar un
-espacio propio y enviar cambios mediante Pull Requests, se recomienda crear un
-fork desde <https://github.com/gmork69/hydor-cualli/fork>.
+La invitación permite colaborar en el repositorio original. Este proyecto usa
+un fork propio para mantener firmware, documentación y diseño 3D en un solo
+lugar, sin repetir manualmente la información en ambos repositorios.
 
 ## 2. Preparar GitHub en la computadora
 
@@ -49,7 +49,8 @@ git remote -v
 La configuración esperada es:
 
 - `origin`: fork personal, usado para publicar ramas.
-- `upstream`: repositorio comunitario, usado para recibir actualizaciones.
+- `upstream`: repositorio fuente, usado solamente para consultar o recibir
+  actualizaciones del código original.
 
 Antes de comenzar una tarea:
 
@@ -132,5 +133,8 @@ git commit -m "tipo: descripcion breve"
 git push -u origin NOMBRE_DE_LA_RAMA
 ```
 
-Finalmente abre un Pull Request hacia `gmork69/hydor-cualli:main`, explica el
-hardware probado y espera revisión antes de integrar el cambio.
+Finalmente abre un Pull Request hacia
+`Tecnodram/SynAptIp-BioSensors-with-Hydor-Cualli:main`, explica el hardware
+probado y espera revisión antes de integrar el cambio. Solo se enviará una
+contribución a `gmork69/hydor-cualli` cuando el equipo decida expresamente que
+una mejora también debe incorporarse al proyecto fuente.
