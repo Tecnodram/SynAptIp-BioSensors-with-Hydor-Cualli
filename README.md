@@ -75,3 +75,5 @@ medidas, requisitos ambientales, mantenimiento y archivos de fabricación.
 Antes de proponer cambios, consulta [CONTRIBUTING.md](CONTRIBUTING.md). El
 archivo `hydor-cualli.code-workspace` permite abrir el proyecto completo en
 VS Code y recomienda las extensiones necesarias para firmware y documentación.
+Para repetir la preparación completa desde una computadora nueva, sigue la
+[guía de instalación y conexión](docs/guia-instalacion.md).
