@@ -90,3 +90,26 @@ serial a 115200 baudios.
 - Se observaron lecturas relativas de 105.47 y 105.40, separadas por 30 segundos.
 - Firebase confirmó `historial guardado (push)` después de cada lectura.
 - Resultado: comunicación ESP8266 → WiFi → Firebase Realtime Database validada.
+
+## 2026-08-13 — Cambio a modo agua y desconexión
+
+- Con la alimentación retirada se cambió la señal de A0 al módulo TDS y se
+  conectó el jumper `D7 → GND`.
+- El firmware registró entradas con `tipo: agua` en `/historial`, confirmando
+  que la selección física de modo funciona.
+- La cifra observada todavía utiliza la conversión lineal provisional y no se
+  considera calibrada.
+- Al desconectar el ESP8266, Firebase conservó tanto la última lectura como el
+  historial. Solamente dejaron de llegar registros nuevos.
+- Se identificó que `estadoConexion` no detecta un corte de energía; la mejora
+  propuesta calculará el estado a partir de la antigüedad de `timestamp`.
+
+## 2026-08-13 — Consolidación documental
+
+- El manual de VS Code/PlatformIO se amplió con Firebase, archivo local de
+  secretos, compilación, carga, monitor serial, modos y solución de problemas.
+- Se añadieron protocolos y materiales de calibración para TDS y MQ-135.
+- Se documentó ADS1115 como mejora recomendada para leer ambos sensores en el
+  mismo ciclo, además de la alternativa ESP32 con ADC1.
+- Se añadieron referencias científicas y técnicas en formato APA 7 con DOI o
+  URL oficial de consulta.

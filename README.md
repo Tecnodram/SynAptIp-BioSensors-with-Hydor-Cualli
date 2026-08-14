@@ -22,18 +22,17 @@ nodo más sencillo —el mismo que ya conoces— y de ahí vamos creciendo.
 
 ## Cómo empezar (resumen)
 
-1. Instala **VSCode** y su extensión **PlatformIO IDE** (una sola vez).
+1. Instala **Visual Studio Code** y su extensión **PlatformIO IDE**.
 2. **Descarga este proyecto** (botón verde `Code → Download ZIP`, o `git clone`).
-3. Abre en VSCode la carpeta del firmware que elegiste.
-4. Edita **solo el bloque "CONFIGURA ESTO"** en `src/main.cpp`:
-   tu **WiFi** y los datos de **Firebase**.
-5. Conecta tu ESP por **USB**, da **Upload** (→) y abre el **Monitor Serial** (115200).
+3. Abre `hydor-cualli.code-workspace` y el proyecto
+   `firmware/esp8266-oficial-historial`.
+4. Copia `include/secrets.example.h` como `include/secrets.h` y completa ahí
+   WiFi y Firebase. Git excluye `secrets.h`; nunca lo compartas.
+5. Conecta el ESP8266 por USB, ejecuta **Build**, después **Upload**, y abre el
+   **Monitor Serial** a 115200 baudios.
 
-> **Por ahora cada quien usa su propio Firebase.** Crea un proyecto gratis en
-> [firebase.google.com](https://firebase.google.com), activa la **Realtime
-> Database** y copia su **URL (host)** y un **token**; eso es lo que pegas en
-> "CONFIGURA ESTO". Más adelante, cuando veamos qué nodos van bien, los
-> juntamos en un servidor central (ahí entra la API).
+El procedimiento completo, incluida la creación segura de Firebase, está en el
+[manual de VS Code y PlatformIO](docs/guia-instalacion.md).
 
 ---
 
@@ -57,7 +56,8 @@ Gracias a toda la comunidad que sostiene el proyecto. 💧🌬️
 
 ## En camino
 
-- ESP32 (2 sensores a la vez) y ESP8266 + ADS1115.
+- ESP8266 + ADS1115 para leer aire y agua en el mismo ciclo.
+- Alternativa ESP32 usando únicamente canales ADC1 durante WiFi.
 - Servidor central propio (para guardar el histórico completo, permanente).
 - Página web para elegir tu hardware y descargar lo tuyo.
 
@@ -75,6 +75,11 @@ medidas, requisitos ambientales, mantenimiento y archivos de fabricación.
 Antes de proponer cambios, consulta [CONTRIBUTING.md](CONTRIBUTING.md). El
 archivo `hydor-cualli.code-workspace` permite abrir el proyecto completo en
 VS Code y recomienda las extensiones necesarias para firmware y documentación.
-Para repetir la preparación completa desde una computadora nueva, sigue la
-[guía de instalación y conexión](docs/guia-instalacion.md).
-Los avances y pruebas realizadas se conservan en la [bitácora técnica](docs/bitacora.md).
+## Documentación
+
+- [Manual de VS Code, PlatformIO, Firebase y conexión](docs/guia-instalacion.md)
+- [Calibración y materiales necesarios](docs/calibracion.md)
+- [Mejoras y medición de ambos sensores](docs/mejoras.md)
+- [Referencias bibliográficas en formato APA](docs/referencias-bibliograficas.md)
+- [Bitácora técnica de pruebas](docs/bitacora.md)
+- [Diseño del prototipo 3D](docs/prototipo-3d/README.md)
