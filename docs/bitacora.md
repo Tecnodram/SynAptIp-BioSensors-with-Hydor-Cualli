@@ -76,3 +76,17 @@ serial a 115200 baudios.
 - Se añadió `include/secrets.example.h` como plantilla pública sin datos reales.
 - La compilación de la nueva autenticación terminó correctamente: 40.2% de RAM
   y 52.1% de flash. La placa todavía no ha sido programada.
+
+## 2026-08-13 — Primera conexión completa del sensor
+
+- Se completó localmente `include/secrets.h`; Git confirmó que el archivo está
+  ignorado y no se publicó ninguna credencial.
+- El firmware autenticado se compiló correctamente con 40.2% de RAM y 52.1%
+  de flash.
+- PlatformIO identificó el dispositivo de `COM6` como un ESP8266EX y cargó
+  548,576 bytes. La escritura y su hash fueron verificados correctamente.
+- El monitor serial confirmó conexión WiFi y sincronización de hora.
+- El jumper D7 estaba abierto, por lo que el firmware inició en modo aire.
+- Se observaron lecturas relativas de 105.47 y 105.40, separadas por 30 segundos.
+- Firebase confirmó `historial guardado (push)` después de cada lectura.
+- Resultado: comunicación ESP8266 → WiFi → Firebase Realtime Database validada.
