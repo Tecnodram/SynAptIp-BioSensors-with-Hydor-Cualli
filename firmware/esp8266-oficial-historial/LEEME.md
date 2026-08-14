@@ -24,10 +24,12 @@ tablero por fin se llena para todos.
 
 ## Cómo cargarlo (VSCode + PlatformIO)
 1. Abre **esta carpeta** en VSCode (con la extensión PlatformIO instalada).
-2. Abre `src/main.cpp` y edita **solo el bloque "CONFIGURA ESTO"**:
-   tu WiFi y los datos de **tu propio** proyecto de Firebase (gratis).
-3. Conecta el ESP por USB y da **Upload** (la flechita →).
-4. Abre el **Monitor Serial** a **115200**. Debe aparecer, cada 30 s,
+2. Copia `include/secrets.example.h` como `include/secrets.h`.
+3. Edita solamente `include/secrets.h` con tus redes WiFi, URL y API key de
+   Firebase, y el correo/contraseña del usuario exclusivo del sensor.
+   `secrets.h` está excluido de Git y nunca debe publicarse.
+4. Conecta el ESP por USB y da **Upload** (la flechita →).
+5. Abre el **Monitor Serial** a **115200**. Debe aparecer, cada 30 s,
    `[Firebase] historial guardado (push).`
 
 ## ¿Qué cambió exactamente respecto al base?

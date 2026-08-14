@@ -26,21 +26,24 @@
 #include <FirebaseESP8266.h>
 #include <time.h>
 
+// Las credenciales reales viven en include/secrets.h, archivo excluido de Git.
+// Si no existe, la plantilla permite compilar sin publicar datos privados.
+#if __has_include("secrets.h")
+#include "secrets.h"
+#else
+#include "secrets.example.h"
+#warning "Usando credenciales de ejemplo; crea include/secrets.h antes de cargar la placa"
+#endif
+
 // ============================================================
 //  ===== CONFIGURA ESTO (lo único que tienes que tocar) =====
 // ============================================================
 
 // ---------- WIFI: pon aquí tus redes reales ----------
-#define WIFI_SSID1     "TU_RED_1"
-#define WIFI_PASSWORD1 "TU_PASSWORD_1"
-#define WIFI_SSID2     "TU_RED_2"
-#define WIFI_PASSWORD2 "TU_PASSWORD_2"
 
 // ---------- FIREBASE: pon aquí los datos de TU proyecto ----------
 // Por ahora cada quien usa su propio Firebase: crea un proyecto gratis,
 // activa la Realtime Database y pega aquí su host y su token.
-#define FIREBASE_HOST  "tu-proyecto.firebaseio.com"
-#define FIREBASE_AUTH  "TU_TOKEN_AQUI"
 
 // ============================================================
 //  fin de "CONFIGURA ESTO"
@@ -144,8 +147,10 @@ void setup() {
   }
   Serial.println(" listo!");
 
-  fbConfig.host = FIREBASE_HOST;
-  fbConfig.signer.tokens.legacy_token = FIREBASE_AUTH;
+  fbConfig.api_key = FIREBASE_API_KEY;
+  fbConfig.database_url = FIREBASE_DATABASE_URL;
+  fbAuth.user.email = FIREBASE_USER_EMAIL;
+  fbAuth.user.password = FIREBASE_USER_PASSWORD;
   Firebase.begin(&fbConfig, &fbAuth);
   Firebase.reconnectWiFi(true);
 

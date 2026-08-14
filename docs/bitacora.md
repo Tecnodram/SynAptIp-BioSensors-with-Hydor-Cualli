@@ -60,3 +60,19 @@ Resultado:
 Preparar credenciales locales excluidas de Git, volver a compilar, cargar el
 firmware por el puerto detectado y validar el arranque mediante el monitor
 serial a 115200 baudios.
+
+## 2026-08-13 — Firebase y autenticación
+
+- Se creó el proyecto Firebase `SynAptIp Hydor Cualli` en el plan Spark.
+- Se creó Realtime Database en `us-central1`, inicialmente vacía y en modo
+  bloqueado.
+- Se habilitó autenticación por correo/contraseña y se creó un usuario
+  exclusivo para el sensor. No se registran aquí su correo, contraseña ni UID.
+- Se publicaron reglas que permiten escribir en `/sensor` y `/historial`
+  solamente al UID del sensor y leer únicamente a usuarios autenticados.
+- El firmware con historial dejó de usar el token heredado. Ahora admite API
+  key, URL de base de datos y usuario Firebase mediante
+  `include/secrets.h`, excluido de Git.
+- Se añadió `include/secrets.example.h` como plantilla pública sin datos reales.
+- La compilación de la nueva autenticación terminó correctamente: 40.2% de RAM
+  y 52.1% de flash. La placa todavía no ha sido programada.
